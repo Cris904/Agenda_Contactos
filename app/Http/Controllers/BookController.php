@@ -48,6 +48,7 @@ class BookController extends Controller
             'name' => 'required',
             'phone' => 'required', 
             'date_birth' => 'required', 
+            'gender' => 'required', 
             'addres' => 'required', 
             'age' => 'required', 
             'email' => 'required'
@@ -56,6 +57,7 @@ class BookController extends Controller
             'name' => $request->name,
             'phone' => $request->phone, 
             'date_birth' => $request->date_birth, 
+            'gender' => $request->gender, 
             'addres' => $request->addres, 
             'age' => $request->age, 
             'email' => $request->email
@@ -105,6 +107,7 @@ class BookController extends Controller
             'name' => 'required',
             'phone' => 'required', 
             'date_birth' => 'required', 
+            'gender' => 'required', 
             'addres' => 'required', 
             'age' => 'required', 
             'email' => 'required'
@@ -112,6 +115,7 @@ class BookController extends Controller
          $book->name = $request->name;
          $book->phone = $request->phone; 
          $book->date_birth = $request->date_birth; 
+         $book->gender = $request->gender;
          $book->addres = $request->addres;
          $book->age = $request->age;
          $book->email = $request->email;

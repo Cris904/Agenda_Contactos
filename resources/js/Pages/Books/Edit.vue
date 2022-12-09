@@ -17,6 +17,7 @@
         name: props.book.name,
         phone: props.book.phone,
         date_birth: props.book.date_birth,
+        gender: props.book.gender,
         addres: props.book.addres,
         age: props.book.age,
         email: props.book.email,
@@ -101,6 +102,25 @@
                                         class="text-sm text-red-600"
                                     >
                                         {{ form.errors.date_birth }}
+                                    </div>
+                                </div>
+                                <div class="mb-6">
+                                    <label
+                                        for="Gender"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                                        >Gender</label>
+                                        <select 
+                                        v-model="form.gender"
+                                        name="gender"
+                                        >
+                                                    <option value="Masculino">Masculino</option>
+                                                    <option value="Femenino">Femenino</option>
+                                                </select>
+                                                <div
+                                        v-if="form.errors.gender"
+                                        class="text-sm text-red-600"
+                                    >
+                                        {{ form.errors.gender }}
                                     </div>
                                 </div>
                                 <div class="mb-6">

@@ -54,10 +54,7 @@
                                 class="relative overflow-x-auto shadow-md sm:rounded-lg"
                             >
                             <div id="books">
-                            <input type="text"
-                                        
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                        placeholder="Buscar" v-model="name">
+                        
                                 <table
                                     class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
                     
@@ -71,6 +68,9 @@
                                                 Name
                                             </th>
                                             <th scope="col" class="px-6 py-3">
+                                                Gender
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
                                                 Phone
                                             </th>
                                             <th scope="col" class="px-6 py-3">
@@ -79,6 +79,7 @@
                                             <th scope="col" class="px-6 py-3">
                                                 Email
                                             </th>
+                                            
                                             <th scope="col" class="px-6 py-3">
                                                 Edit
                                             </th>
@@ -105,6 +106,9 @@
                                             >
                                                 {{ book.name }}
                                             </th>
+                                            <td class="px-6 py-4">
+                                                {{ book.gender }}
+                                            </td>
                                             <td class="px-6 py-4">
                                                 {{ book.phone }}
                                             </td>

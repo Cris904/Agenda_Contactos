@@ -17,6 +17,7 @@
         name : '', 
         phone: '', 
         date_birth: '', 
+        gender: '',
         addres: '', 
         age: '', 
         email: '',
@@ -105,6 +106,26 @@
                                 </div>
                                 <div class="mb-6">
                                     <label
+                                        for="Gender"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                                        >Gender</label>
+                                        <select 
+                                        v-model="form.gender"
+                                        name="gender"
+                                        >
+                                                    <option value="Masculino">Masculino</option>
+                                                    <option value="Femenino">Femenino</option>
+                                                </select>
+                                                <div
+                                        v-if="form.errors.gender"
+                                        class="text-sm text-red-600"
+                                    >
+                                        {{ form.errors.gender }}
+                                    </div>
+                                </div>
+
+                                <div class="mb-6">
+                                    <label
                                         for="Addres"
                                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                                         >Address</label
@@ -150,7 +171,6 @@
                                         >Email</label
                                     >
                                     <input
-                                        type="text"
                                         v-model="form.email"
                                         name="email"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
